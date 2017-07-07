@@ -118,7 +118,7 @@ class MyInteractive(cmd.Cmd):
         finished = skills.get('Studied')
         print(
             'Total Skills: {}\nFinished Skills: {}\nUnfinished Skills: {}'.format(  # NOQA
-                len(total_skills), len(unfinished), len(finished)
+                len(total_skills), len(finished), len(unfinished)
         ))
 
 
