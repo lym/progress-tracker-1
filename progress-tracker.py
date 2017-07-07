@@ -64,7 +64,7 @@ class MyInteractive(cmd.Cmd):
     file = None
 
     @docopt_cmd
-    def add_skill(self, arg):
+    def do_add_skill(self, arg):
         """Usage: add_skill <skill>"""
         skill = arg['<skill>']
         if isinstance(skill, str):
@@ -72,12 +72,12 @@ class MyInteractive(cmd.Cmd):
             return 'Skill added'
 
     @docopt_cmd
-    def view_skills(self, arg):
+    def do_view_skills(self, arg):
         """Usage: view_skills"""
         return All_skills
 
     @docopt_cmd
-    def studied(self, arg):
+    def do_studied(self, arg):
         """Usage: studied <skill>"""
         skill = arg['<skill>']
         if skill not in All_skills:
@@ -86,7 +86,7 @@ class MyInteractive(cmd.Cmd):
             skills['Studied'].append(skill)
 
     @docopt_cmd
-    def not_studied(self, arg):
+    def do_not_studied(self, arg):
         """Usage: not_studied <skill>"""
         skill = arg['<skill>']
         if skill not in All_skills:
@@ -95,12 +95,12 @@ class MyInteractive(cmd.Cmd):
             skills['Not Studied'].append(skill)
 
     @docopt_cmd
-    def view_studied(self, arg):
+    def do_view_studied(self, arg):
         """Usage: view_studied"""
         return skills['Studied']
 
     @docopt_cmd
-    def view_notstudied(self, arg):
+    def do_view_notstudied(self, arg):
         """Usage: view_studied"""
         return skills['Not studied']
 
