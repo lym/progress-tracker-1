@@ -9,8 +9,8 @@ Usage:
     progress-tracker.py not_studied <skill>
     progress-tracker.py view_studied
     progress-tracker.py view_notstudied
-    my_program (-i | --interactive)
-    my_program (-h | --help | --version)
+    progress-tracker.py (-i | --interactive)
+    progress-tracker.py (-h | --help | --version)
 Options:
     -i, --interactive  Interactive Mode
     -h, --help  Show this screen and exit.
