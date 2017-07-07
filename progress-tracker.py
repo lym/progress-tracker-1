@@ -84,6 +84,7 @@ class MyInteractive(cmd.Cmd):
             print('Add skill first')
         else:
             skills['Studied'].append(skill)
+            print('Added to studied list')
 
     @docopt_cmd
     def do_not_studied(self, arg):
