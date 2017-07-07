@@ -93,7 +93,7 @@ class MyInteractive(cmd.Cmd):
         if skill not in All_skills:
             print('Add skill first')
         else:
-            skills['Not Studied'].append(skill)
+            skills['Not studied'].append(skill)
 
     @docopt_cmd
     def do_view_studied(self, arg):
