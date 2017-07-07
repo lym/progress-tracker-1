@@ -67,9 +67,11 @@ class MyInteractive(cmd.Cmd):
     def do_add_skill(self, arg):
         """Usage: add_skill <skill>..."""
         skill = " ".join(arg['<skill>'])
-        if isinstance(skill, str):
-            All_skills.append(skill)
-            print('Skill added')
+        skills=skill.split("|")
+        for skill_item in skills:
+            if isinstance(skill_item, str):
+                All_skills.append(skill_item)
+                print('{} added'.format(skill_item))
 
     @docopt_cmd
     def do_view_skills(self, arg):
