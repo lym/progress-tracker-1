@@ -69,19 +69,19 @@ class MyInteractive(cmd.Cmd):
         skill = arg['<skill>']
         if isinstance(skill, str):
             All_skills.append(skill)
-            return 'Skill added'
+            print('Skill added')
 
     @docopt_cmd
     def do_view_skills(self, arg):
         """Usage: view_skills"""
-        return All_skills
+        print(All_skills)
 
     @docopt_cmd
     def do_studied(self, arg):
         """Usage: studied <skill>"""
         skill = arg['<skill>']
         if skill not in All_skills:
-            return 'Add skill first'
+            print('Add skill first')
         else:
             skills['Studied'].append(skill)
 
@@ -90,19 +90,19 @@ class MyInteractive(cmd.Cmd):
         """Usage: not_studied <skill>"""
         skill = arg['<skill>']
         if skill not in All_skills:
-            return 'Add skill first'
+            print('Add skill first')
         else:
             skills['Not Studied'].append(skill)
 
     @docopt_cmd
     def do_view_studied(self, arg):
         """Usage: view_studied"""
-        return skills['Studied']
+        print(skills['Studied'])
 
     @docopt_cmd
     def do_view_notstudied(self, arg):
         """Usage: view_studied"""
-        return skills['Not studied']
+        print(skills['Not studied'])
 
     def do_quit(self, arg):
         """Quits out of Interactive Mode."""
