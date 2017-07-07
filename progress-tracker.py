@@ -58,7 +58,7 @@ def docopt_cmd(func):
 
 
 class MyInteractive(cmd.Cmd):
-    intro = 'Welcome to my interactive program!' \
+    intro = 'Welcome to Progress Tracker!' \
             + ' (type help for a list of commands.)'
     prompt = '(Progress Tracker) '
     file = None
