@@ -113,6 +113,16 @@ class MyInteractive(cmd.Cmd):
         print('Good Bye!')
         exit()
 
+    def do_view_study_progess(self, arg):
+        """Usage: view_study_progress"""
+        total_skills = All_skills
+        unfinished = skills.get('Not studied')
+        finished = skills.get('Studied')
+        print(
+            'Total Skills: {}\nFinished Skills: {}\nUnfinished Skills: {}'.format(  # NOQA
+                len(total_skills), len(finished), len(unfinished)
+        ))
+
 
 opt = docopt(__doc__, sys.argv[1:])
 
