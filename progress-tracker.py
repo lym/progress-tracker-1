@@ -3,7 +3,7 @@
 This example uses docopt with the built in cmd module to demonstrate an
 interactive command application.
 Usage:
-    progress-tracker.py add_skill <skill>
+    progress-tracker.py add_skill <skill>..
     progress-tracker.py view_skills
     progress-tracker.py studied <skill>
     progress-tracker.py not_studied <skill>
@@ -65,8 +65,8 @@ class MyInteractive(cmd.Cmd):
 
     @docopt_cmd
     def do_add_skill(self, arg):
-        """Usage: add_skill <skill>"""
-        skill = arg['<skill>']
+        """Usage: add_skill <skill>.."""
+        skill = " ".join(arg['<skill>'])
         if isinstance(skill, str):
             All_skills.append(skill)
             print('Skill added')
