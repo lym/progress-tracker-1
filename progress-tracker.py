@@ -65,7 +65,7 @@ class MyInteractive(cmd.Cmd):
 
     @docopt_cmd
     def do_add_skill(self, arg):
-        """Usage: add_skill <skill>.."""
+        """Usage: add_skill <skill>..."""
         skill = " ".join(arg['<skill>'])
         if isinstance(skill, str):
             All_skills.append(skill)
